@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentx-foo"
+version = "0.1.0"
+description = "AgentX - Native compiled Python agent framework"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "kugesan", email = "kugesan@example.com"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["agent", "cli", "nuitka"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "nuitka>=2.0",
+    "pytest>=7.0",
+    "build",
+    "twine",
+]
+
+[project.scripts]
+agentx = "agentx.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kugesan/agentx-foo"
+Repository = "https://github.com/kugesan/agentx-foo.git"
+Issues = "https://github.com/kugesan/agentx-foo/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

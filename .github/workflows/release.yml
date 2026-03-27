@@ -61,6 +61,7 @@ jobs:
           python -m nuitka \
             --standalone \
             --onefile \
+            --assume-yes-for-download \
             --include-package=agentx \
             --output-filename=agentx-${{ matrix.platform }}-${{ matrix.arch }} \
             --output-dir=dist \
@@ -72,6 +73,7 @@ jobs:
           python -m nuitka `
             --standalone `
             --onefile `
+            --assume-yes-for-download `
             --include-package=agentx `
             --output-filename=agentx-${{ matrix.platform }}-${{ matrix.arch }}.exe `
             --output-dir=dist `

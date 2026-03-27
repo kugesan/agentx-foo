@@ -13,10 +13,10 @@ python -m nuitka \
     --onefile \
     --assume-yes-for-download \
     --enable-plugin=tk-inter \
-    --include-package=agentx \
+    --include-package=agentx_core \
     --output-filename=agentx \
     --output-dir=dist \
-    src/agentx/main.py
+    src/agentx_core/main.py
 
 echo "Build complete!"
 echo "Binary located at: dist/agentx"

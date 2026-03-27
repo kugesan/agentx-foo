@@ -1,3 +1,5 @@
 include LICENSE
 include README.md
-recursive-include src *.py
+recursive-include src/agentx *.py
+# Exclude core app - only distributed as compiled binary
+recursive-exclude src/agentx_core *

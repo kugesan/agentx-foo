@@ -63,10 +63,10 @@ jobs:
             --onefile \
             --assume-yes-for-download \
             --enable-plugin=tk-inter \
-            --include-package=agentx \
+            --include-package=agentx_core \
             --output-filename=agentx-${{ matrix.platform }}-${{ matrix.arch }} \
             --output-dir=dist \
-            src/agentx/main.py
+            src/agentx_core/main.py
 
       - name: Build with Nuitka (Windows)
         if: matrix.platform == 'windows'
@@ -77,10 +77,10 @@ jobs:
             --assume-yes-for-download `
             --enable-plugin=tk-inter `
             --windows-disable-console `
-            --include-package=agentx `
+            --include-package=agentx_core `
             --output-filename=agentx-${{ matrix.platform }}-${{ matrix.arch }}.exe `
             --output-dir=dist `
-            src/agentx/main.py
+            src/agentx_core/main.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

@@ -11,10 +11,12 @@ echo "Building native binary..."
 python -m nuitka \
     --standalone \
     --onefile \
+    --assume-yes-for-download \
+    --enable-plugin=tk-inter \
     --include-package=agentx \
     --output-filename=agentx \
     --output-dir=dist \
-    src/agentx/cli.py
+    src/agentx/main.py
 
 echo "Build complete!"
 echo "Binary located at: dist/agentx"
